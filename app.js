@@ -192,4 +192,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const books = await response.json();
         displayBooks(filterAndSortBooks(books));
     });
+    document.getElementById('sortSelect').addEventListener('change', async() => {
+        const response = await fetch(API.GET_BOOKS);
+        const books = await response.json();
+        displayBooks(filterAndSortBooks(books));
+    });
 });
